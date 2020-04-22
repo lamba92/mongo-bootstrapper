@@ -1,5 +1,6 @@
 @file:Suppress("SuspiciousCollectionReassignment")
 
+import com.github.lamba92.gradle.utils.TRAVIS_TAG
 import com.github.lamba92.gradle.utils.kotlinx
 import com.github.lamba92.gradle.utils.prepareForPublication
 import com.github.lamba92.gradle.utils.serialization
@@ -22,7 +23,7 @@ plugins {
 }
 
 group = "com.github.lamba92"
-version = "1.0.0"
+version = TRAVIS_TAG ?: "1.0.0"
 
 repositories {
     maven("https://dl.bintray.com/kotlin/kotlin-eap")
